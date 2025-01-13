@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 3
+  number: 4
 
 requirements:
   build:
@@ -19,16 +19,12 @@ requirements:
     - {{ compiler('cxx') }}
     - autoconf
     - automake
-    - libtool
-    - pkg-config
-    - make
-  host:
+    - gnuconfig
     - librsvg
-    - libtiff
-    - libjpeg-turbo
-    - libjpeg-turbo
-  run:
-    - libjpeg-turbo
+    - libtool
+    - make
+    - pkg-config
+  host:
     - libtiff
     - libjpeg-turbo
 
@@ -44,4 +40,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - danielnachun
     - izahn
