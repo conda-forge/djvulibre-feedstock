@@ -21,7 +21,7 @@ requirements:
     - autoconf
     - automake
     - gnuconfig
-    - librsvg
+    - librsvg  # needed for rsvg-convert, which must be executed on build host
     - libtool
     - make
     - pkg-config
