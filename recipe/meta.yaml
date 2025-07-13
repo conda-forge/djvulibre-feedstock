@@ -11,24 +11,21 @@ source:
 
 build:
   skip: true  # [win]
-  number: 3
+  number: 4
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - autoconf
     - automake
+    - gnuconfig
+    - librsvg  # needed for rsvg-convert, which must be executed on build host
     - libtool
-    - pkg-config
     - make
+    - pkg-config
   host:
-    - librsvg
-    - libtiff
-    - libjpeg-turbo
-    - libjpeg-turbo
-  run:
-    - libjpeg-turbo
     - libtiff
     - libjpeg-turbo
 
@@ -44,4 +41,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - danielnachun
     - izahn
